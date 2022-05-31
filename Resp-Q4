@@ -1,0 +1,77 @@
+public class Agenda {
+
+    Integer codigo;
+    String telefone;
+    Integer idade;
+
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public Integer getIdade() {
+        return idade;
+    }
+
+    public void setIdade(Integer idade) {
+        this.idade = idade;
+    }
+}
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Integer aux =5;
+        while(aux!=0) {
+            System.out.println("(1) – inserir um contato");
+            System.out.println("(2) – Remover um contato");
+            System.out.println("(3) – Editar um ");
+            System.out.println("(0) – Sair");
+            List<Agenda> agenda = new ArrayList<>();
+            Agenda contato = new Agenda();
+
+            Scanner leitor = new Scanner(System.in);
+            Integer r = leitor.nextInt();
+            if (r == 0) {
+                aux = 0;
+            }
+            if(r==1){
+                System.out.println("Insira o código");
+                Scanner cod = new Scanner(System.in);
+                contato.setCodigo(leitor.nextInt());
+
+                System.out.println("Insira o telefone");
+                Scanner telefone = new Scanner(System.in);
+                contato.setTelefone(telefone.next());
+
+                System.out.println("Insira a idade");
+                Scanner idade = new Scanner(System.in);
+                contato.setIdade(idade.nextInt());
+
+                agenda.add(contato);
+
+                System.out.println(contato.getCodigo());
+                System.out.println(contato.getTelefone());
+                System.out.println(contato.getIdade());
+
+
+            }
+        }
+
+
+    }
+}
