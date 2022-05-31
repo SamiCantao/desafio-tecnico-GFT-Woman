@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        String resposta = leitor.next();
+
+        for(int x=0; x<resposta.length(); x++) {
+            String caractere = resposta.substring(x,x+1);
+            if(caractere.equals("A") || caractere.equals("B") ||  caractere.equals("C")){
+                System.out.print(2);
+            }
+            else if(caractere.equals("D") || caractere.equals("E") ||  caractere.equals("F")) {
+                System.out.print(3);
+            }
+            else if(caractere.equals("G") || caractere.equals("H") ||  caractere.equals("I")) {
+                System.out.print(4);
+            }
+            else if(caractere.equals("J") || caractere.equals("K") ||  caractere.equals("L")) {
+                System.out.print(5);
+            }
+            else if(caractere.equals("M") || caractere.equals("N") ||  caractere.equals("O")) {
+                System.out.print(6);
+            }
+            else if(caractere.equals("P") || caractere.equals("Q") ||  caractere.equals("R") ||  caractere.equals("S")) {
+                System.out.print(7);
+            }
+            else if(caractere.equals("T") || caractere.equals("U") ||  caractere.equals("V")) {
+                System.out.print(8);
+            }
+            else if(caractere.equals("W") || caractere.equals("X") ||  caractere.equals("Y") || caractere.equals("Z")) {
+                System.out.print(9);
+            }
+            else if(caractere.equals("0") || caractere.equals("1") ||  caractere.equals("-")){
+                System.out.print(caractere);
+            }
+        }
+
+    }
+}
