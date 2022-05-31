@@ -1,0 +1,52 @@
+public class Automovel {
+
+    String combustivel;
+
+    public String getCombustivel() {
+        return combustivel;
+    }
+
+    public void setCombustivel(String combustivel) {
+        this.combustivel = combustivel;
+    }
+}
+
+public class Caminhao extends Automovel {
+    public Caminhao() {
+        this.combustivel = "Diesel";
+    }
+}
+
+public class Esportivo extends Automovel {
+    public Esportivo() {
+        this.combustivel = "Gasolina";
+    }
+}
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        String resposta = leitor.next();
+
+        if(resposta.equals("Caminhao")){
+            Caminhao caminhao = new Caminhao();
+            System.out.println(caminhao.combustivel);
+        }
+        else if(resposta.equals("Esportivo")){
+            Esportivo esportivo = new Esportivo();
+            System.out.println(esportivo.combustivel);
+        } else {
+            System.out.println("Resposta inválida");
+        }
+
+        }
+}
+
+
+
+
+
+
+
